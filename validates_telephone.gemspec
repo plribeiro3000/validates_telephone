@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.email       = %q{plribeiro3000@gmail.com}
   s.homepage    = ""
   s.summary     = %q{Telephone Validation GEM}
-  s.description = %q{Validates Telephone and test it with macros in a simple way.}
+  s.description = %q{Validates Telephone for Brazil and United States and test it with matchers in a simple way.}
 
   s.add_dependency("activerecord", ">= 3.0.0")
 
