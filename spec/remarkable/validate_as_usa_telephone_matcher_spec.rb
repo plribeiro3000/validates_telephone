@@ -1,16 +1,16 @@
 require 'spec_helper'
-require 'shoulda-matchers'
+require 'remarkable/active_record'
 
-describe Shoulda::Matchers::ActiveModel::ValidateAsTelephoneMatcher do
+describe Remarkable::ActiveRecord::Matchers::ValidateAsUsaTelephoneMatcher do
   context "on a attribute which validates telephone" do
     it "should require a valid telephone" do
-      @user = User.new(:telephone => '123456')
-      @user.should validate_as_telephone(:telephone)
+      @user = EnUser.new(:telephone => '123456')
+      @user.should validate_as_usa_telephone(:telephone)
     end
 
     it "should allow a nil value" do
-      @user = User.new(:telephone => nil)
-      @user.should validate_as_telephone(:telephone)
+      @user = EnUser.new(:telephone => nil)
+      @user.should validate_as_usa_telephone(:telephone)
     end
   end
 
@@ -20,7 +20,7 @@ describe Shoulda::Matchers::ActiveModel::ValidateAsTelephoneMatcher do
     end
 
     it "should not require a valid telephone" do
-      @user.should_not validate_as_telephone(:telephone)
+      @user.should_not validate_as_usa_telephone(:telephone)
     end
   end
 end

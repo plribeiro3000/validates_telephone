@@ -3,7 +3,7 @@ require 'remarkable/active_record'
 module Remarkable
   module ActiveRecord
     module Matchers
-      class ValidateAsTelephoneMatcher < Remarkable::ActiveRecord::Base
+      class ValidateAsBrTelephoneMatcher < Remarkable::ActiveRecord::Base
         arguments :telephone
 
         collection_assertions :telephone_valid?, :allow_nil?, :formatted_number?
@@ -26,8 +26,8 @@ module Remarkable
         end
       end
 
-      def validate_as_telephone(*args, &block)
-        ValidateAsTelephoneMatcher.new(*args, &block).spec(self)
+      def validate_as_br_telephone(*args, &block)
+        ValidateAsBrTelephoneMatcher.new(*args, &block).spec(self)
       end
     end
   end

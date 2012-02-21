@@ -3,21 +3,21 @@ require "shoulda-matchers"
 module Shoulda
   module Matchers
     module ActiveModel
-      def validate_as_telephone(attr)
-        ValidateAsTelephoneMatcher.new(attr)
+      def validate_as_br_telephone(attr)
+        ValidateAsBrTelephoneMatcher.new(attr)
       end
 
-      class ValidateAsTelephoneMatcher < ValidationMatcher
+      class ValidateAsBrTelephoneMatcher < ValidationMatcher
         def initialize(attribute)
           @attribute = attribute
         end
 
         def description
-          "validate #{@attribute} as a valid Telephone number"
+          "validate #{@attribute} as a valid Telephone number for Brazil"
         end
 
         def failure_message
-          "expected #{@attribute} to be validated as a valid Telephone number"
+          "expected #{@attribute} to be validated as a valid Telephone number for Brazil"
         end
 
         def matches?(subject)
