@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
     validates :telephone, :telephone => true
 end
 
-In case you want it to be a valid telephone for United States, just pass the locale as en:
+In case you want it to be a valid telephone for United States, just pass the locale as usa:
 
 class User < ActiveRecord::Base
     validates :telephone, :telephone => { :locale => :usa }
@@ -36,7 +36,7 @@ If you want the matchers for United States and you are using remarkable, add thi
 
 === How?
 
-You should use validates_as_telephone(:attribute) just like any other shoulda or remarkable matcher.
+You should use validates_as_br_telephone(:attribute) for brazil telephones and validates_as_usa_telephone(:attribute) for united states telephones just like any other shoulda or remarkable matcher.
 
 == Future
 
