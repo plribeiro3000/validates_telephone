@@ -1,0 +1,19 @@
+= ValidatesTelephone {<img src="https://secure.travis-ci.org/plribeiro3000/validates_telephone.png" />}[http://travis-ci.org/plribeiro3000/validates_telephone]
+
+Rails gem to validate Telephone.
+
+== Install
+
+gem install validates_telephone
+
+== Usage
+
+Lets say you have a model with "telephone" string column that you want to be a valid telephone. Just add this to your model:
+
+class User < ActiveRecord::Base
+    validates :telephone, :telephone => true
+end
+
+== Future
+
+Add Support for other countries. For now it only supports Brazil telephones.
