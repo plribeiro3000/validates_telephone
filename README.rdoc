@@ -24,9 +24,9 @@ end
 
 This gem has matchers for shoulda-matchers and remarkable.
 
-If you want the matchers for Brasil and you are using shoulda-matchers, add this line to your spec_helper.rb :
+If you want the matchers for Brazil and you are using shoulda-matchers, add this line to your spec_helper.rb :
     require "validates_telephone/shoulda-matchers/validate_as_br_telephone_matcher"
-If you want the matchers for Brasil and you are using remarkable, add this line to your spec_helper.rb :
+If you want the matchers for Brazil and you are using remarkable, add this line to your spec_helper.rb :
     require "validates_telephone/remarkable/validate_as_br_telephone_matcher"
 
 If you want the matchers for United States and you are using shoulda-matchers, add this line to your spec_helper.rb :
