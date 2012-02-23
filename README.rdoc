@@ -41,3 +41,7 @@ You should use validates_as_br_telephone(:attribute) for brazil telephones and v
 == Future
 
 Add Support for other countries. For now it only supports Brazil and United States telephones.
+
+== Contribute
+
+Fork the project and send me a Pull Request. =D
