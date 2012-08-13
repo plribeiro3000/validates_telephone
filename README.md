@@ -1,4 +1,4 @@
-= ValidatesTelephone {<img src="https://secure.travis-ci.org/plribeiro3000/validates_telephone.png" />}[http://travis-ci.org/plribeiro3000/validates_telephone]
+# ValidatesTelephone [![Build Status](https://secure.travis-ci.org/plribeiro3000/validates_telephone.png?branch=master)](http://travis-ci.org/plribeiro3000/validates_telephone)
 
 Rails gem to validate Telephone.
 
@@ -16,9 +16,9 @@ Or install it yourself as:
 
     $ gem install validates_telephone
 
-== Basic Usage
+## Basic Usage
 
-It will accept a valid telephone from Brasil or United States by default:
+It will accept a valid telephone from Brazil or United States by default:
 
 ```ruby
 class User < ActiveRecord::Base
@@ -35,11 +35,11 @@ class User < ActiveRecord::Base
 end
 ```
 
-== Test
+## Test
 
 This gem has builtin matchers for shoulda-matchers and remarkable.
 
-== Contributing
+## Contributing
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
