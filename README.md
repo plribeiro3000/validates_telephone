@@ -39,6 +39,10 @@ end
 
 This gem has builtin matchers for shoulda-matchers and remarkable.
 
+## Notes
+
+Since version 1.0.0, it isn’t necessary to load any file inside your spec_helper anymore.
+
 ## Contributing
 
 1. Fork it
