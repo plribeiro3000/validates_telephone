@@ -1,7 +1,5 @@
-class BrUser < ActiveRecord::Base
+class User < ActiveRecord::Base
   validates :telephone, :telephone => true
-end
-
-class EnUser < ActiveRecord::Base
-  validates :telephone, :telephone => { :locale => :usa }
+  validates :br_telephone, :telephone => { :locale => :br }
+  validates :usa_telephone, :telephone => { :locale => :usa }
 end

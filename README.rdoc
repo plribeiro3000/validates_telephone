@@ -2,46 +2,47 @@
 
 Rails gem to validate Telephone.
 
-== Install
+## Installation
 
-gem install validates_telephone
+Add this line to your application's Gemfile:
 
-== Usage
+    gem 'validates_telephone'
 
-Lets say you have a model with "telephone" string column that you want to be a valid telephone for Brazil. Just add this to your model:
+And then execute:
 
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install validates_telephone
+
+== Basic Usage
+
+It will accept a valid telephone from Brasil or United States by default:
+
+```ruby
 class User < ActiveRecord::Base
     validates :telephone, :telephone => true
 end
+```
 
-In case you want it to be a valid telephone for United States, just pass the locale as usa:
+In case you want it to be a valid telephone for just one place at a time, pass the locale:
 
+```ruby
 class User < ActiveRecord::Base
-    validates :telephone, :telephone => { :locale => :usa }
+    validates :br_telephone, :telephone => { :locale => :br }
+    validates :usa_telephone, :telephone => { :locale => :usa }
 end
+```
 
 == Test
 
-This gem has matchers for shoulda-matchers and remarkable.
+This gem has builtin matchers for shoulda-matchers and remarkable.
 
-If you want the matchers for Brazil and you are using shoulda-matchers, add this line to your spec_helper.rb :
-    require "validates_telephone/shoulda-matchers/validate_as_br_telephone_matcher"
-If you want the matchers for Brazil and you are using remarkable, add this line to your spec_helper.rb :
-    require "validates_telephone/remarkable/validate_as_br_telephone_matcher"
+== Contributing
 
-If you want the matchers for United States and you are using shoulda-matchers, add this line to your spec_helper.rb :
-    require "validates_telephone/shoulda-matchers/validate_as_usa_telephone_matcher"
-If you want the matchers for United States and you are using remarkable, add this line to your spec_helper.rb :
-    require "validates_telephone/remarkable/validate_as_usa_telephone_matcher"
-
-=== How?
-
-You should use validates_as_br_telephone(:attribute) for brazil telephones and validates_as_usa_telephone(:attribute) for united states telephones just like any other shoulda or remarkable matcher.
-
-== Future
-
-Add Support for other countries. For now it only supports Brazil and United States telephones.
-
-== Contribute
-
-Fork the project and send me a Pull Request. =D
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Added some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request

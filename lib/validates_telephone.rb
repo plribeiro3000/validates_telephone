@@ -1,12 +1,12 @@
-require "active_model"
-require "validates_telephone/telephone"
+#Validator
+require "validates_telephone/telephone_validator"
 
-class TelephoneValidator < ActiveModel::EachValidator
-  def validate_each(record, attribute, value)
-    if options[:locale].nil?
-      record.errors[attribute] << I18n.t("errors.messages.invalid") unless Telephone.new(value, :br).valid?
-    else
-      record.errors[attribute] << I18n.t("errors.messages.invalid") unless Telephone.new(value, options[:location]).valid?
-    end
-  end
+#Rspec Matchers
+require "validates_telephone/shoulda-matchers/require_a_valid_telephone_matcher" if defined?(::Shoulda)
+require "validates_telephone/remarkable/require_a_valid_telephone_matcher" if defined?(::Remarkable)
+
+module ValidatesTelephone
+  autoload :Validator, "validates_telephone/validator"
+  autoload :Regex, "validates_telephone/regex"
+  autoload :Formatter, "validates_telephone/formatter"
 end

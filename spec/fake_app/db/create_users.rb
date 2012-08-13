@@ -1,15 +1,13 @@
 class CreateUsers < ActiveRecord::Migration
   def self.up
-    create_table :br_users do |u|
+    create_table :users do |u|
       u.string :telephone
-    end
-    create_table :en_users do |u|
-      u.string :telephone
+      u.string :br_telephone
+      u.string :usa_telephone
     end
   end
 
   def self.down
-    drop_table :br_users
-    drop_table :en_users
+    drop_table :users
   end
 end
