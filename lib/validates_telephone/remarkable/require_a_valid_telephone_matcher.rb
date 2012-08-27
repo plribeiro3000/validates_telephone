@@ -14,13 +14,13 @@ module Remarkable
 
         def telephone_valid?
           return allows_value_of("(111)222-3333") if @options[:locale] == :usa
-          return allows_value_of("(11)2222-3333") if @options[:locale] == :br
+          return (allows_value_of("(11)2222-3333") and allows_value_of("(11)91111-1111")) if @options[:locale] == :br
           allows_value_of("(111)222-3333") and allows_value_of("(11)2222-3333")
         end
 
         def telephone_invalid?
           return (disallows_value_of("123456") and disallows_value_of("(11)2222-3333")) if @options[:locale] == :usa
-          return (disallows_value_of("123456") and disallows_value_of("(111)222-3333")) if @options[:locale] == :br
+          return (disallows_value_of("123456") and disallows_value_of("(111)222-3333") and disallows_value_of("(11)81111-1111")) if @options[:locale] == :br
           disallows_value_of("123456")
         end
 
