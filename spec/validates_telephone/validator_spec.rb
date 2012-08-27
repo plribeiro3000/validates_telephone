@@ -14,6 +14,10 @@ describe ValidatesTelephone::Validator do
       it "12345678910 as number" do
         ValidatesTelephone::Validator.new('12345678910', :br).should_not be_valid
       end
+
+      it "11811111111 as number" do
+        ValidatesTelephone::Validator.new('11811111111', :br).should_not be_valid
+      end
     end
 
     context "should be valid with" do
@@ -36,11 +40,19 @@ describe ValidatesTelephone::Validator do
       it "(11)1111-1111 as number" do
         ValidatesTelephone::Validator.new('(11)1111-1111', :br).should be_valid
       end
+
+      it "(11)91111-1111 as number" do
+        ValidatesTelephone::Validator.new('(11)91111-1111', :br).should be_valid
+      end
     end
 
     context "with a valid value" do
       it "should return it formatted" do
         ValidatesTelephone::Validator.new('1111111111', :br).number.should == '(11)1111-1111'
+      end
+
+      it "should return it formatted(sp format)" do
+        ValidatesTelephone::Validator.new('11911111111', :br).number.should == '(11)91111-1111'
       end
     end
 
