@@ -1,0 +1,8 @@
+usa:
+  activemodel:
+    errors:
+      models:
+        user:
+          attributes:
+            usa_telephone:
+              invalid: 'is invalid'

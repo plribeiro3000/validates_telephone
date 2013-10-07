@@ -1,10 +1,11 @@
-require "rubygems"
-require "rspec"
-require "active_record"
+require 'rspec'
+require 'active_model'
+require 'coveralls'
 
-Dir.glob(File.dirname(__FILE__) + "/../lib/**/*.rb").each { |file| require file }
-Dir.glob(File.dirname(__FILE__) + "/fake_app/**/*.rb").each { |file| require file }
+Coveralls.wear!
 
-ActiveRecord::Base.establish_connection(:adapter => "sqlite3", :database => ":memory:")
-
-CreateUsers.migrate(:up)
+Dir.glob(File.dirname(__FILE__) + '/../lib/**/*.rb').each { |file| require file }
+Dir.glob(File.dirname(__FILE__) + '/fake_app/*.rb').each { |file| require file }
+Dir.glob(File.dirname(__FILE__) + '/fake_app/locales/*.yml').each do |file|
+  I18n.load_path << file
+end

@@ -1,4 +1,5 @@
-require "shoulda-matchers"
+require 'shoulda-matchers'
+require 'active_support/core_ext/array/wrap'
 
 module Shoulda
   module Matchers

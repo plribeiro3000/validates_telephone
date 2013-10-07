@@ -1,0 +1,8 @@
+br:
+  activemodel:
+    errors:
+      models:
+        user:
+          attributes:
+            br_telephone:
+              invalid: 'is invalid'
