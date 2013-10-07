@@ -1,6 +1,8 @@
-# ValidatesTelephone [![Build Status](https://secure.travis-ci.org/plribeiro3000/validates_telephone.png?branch=master)](http://travis-ci.org/plribeiro3000/validates_telephone)
+# ValidatesTelephone 
 
-Rails gem to validate Telephone.
+[![Gem Version](https://badge.fury.io/rb/validates_telephone.png)](http://badge.fury.io/rb/validates_telephone) [![Build Status](https://secure.travis-ci.org/plribeiro3000/validates_telephone.png?branch=master)](http://travis-ci.org/plribeiro3000/validates_telephone) [![Dependency Status](https://gemnasium.com/plribeiro3000/validates_telephone.png)](https://gemnasium.com/plribeiro3000/validates_telephone) [![Coverage Status](https://coveralls.io/repos/plribeiro3000/validates_telephone/badge.png?branch=master)](https://coveralls.io/r/plribeiro3000/validates_telephone)  [![Code Climate](https://codeclimate.com/github/plribeiro3000/validates_telephone.png)](https://codeclimate.com/github/plribeiro3000/validates_telephone)
+
+Validates telephone and test it in a simple way
 
 ## Installation
 
@@ -35,13 +37,12 @@ class User < ActiveRecord::Base
 end
 ```
 
-## Test
-
-This gem has builtin matchers for shoulda-matchers and remarkable.
-
 ## Notes
 
-Since version 1.0.0, it isn’t necessary to load any file inside your spec_helper anymore.
+It will load a matcher to test automatically if the gem is defined after shoulda-matchers.
+
+## Mantainers
+[@plribeiro3000](https://github.com/plribeiro3000)
 
 ## Contributing
 
