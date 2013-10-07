@@ -1,7 +1,7 @@
 module ValidatesTelephone
   module Regex
     def self.br(number)
-      number =~ /^(\(?\d{2}\)?)(\d{4})-?(\d{4})$/
+      number =~ /^(\(?\d{2}\)?)(9)?(\d{4})-?(\d{4})$/
     end
 
     def self.usa(number)
